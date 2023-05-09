@@ -1,0 +1,202 @@
+body {
+    --background-color: rgb(255, 255, 255);
+    --text-color: rgb(12, 4, 20);
+    --inline-link-color: rgb(161, 6, 223);
+    --card-color: rgb(228, 228, 228);
+    --card-header-color: rgb(161, 6, 223);
+    --card-hover-color: rgb(236, 236, 236);
+    --card-hover-header-color: rgb(206, 86, 253);
+    --card-hover-shaddow-color: rgba(74, 21, 105, 0.432);
+    --card-abandoned-header-color: rgb(113, 94, 121);
+    --card-abandoned-hover-header-color: rgb(166, 156, 170);
+    --card-header-text-color: rgb(255, 255, 255);
+    --card-link-color: rgb(187, 187, 187);
+    --card-hover-link-color: rgb(188, 154, 247);
+    --card-text-color: rgb(0, 0, 0);
+
+    --teaser-filter: grayscale(20%);
+}
+
+@media(prefers-color-scheme: dark) {
+    body {
+        --background-color: rgb(35, 39, 38);
+        --text-color: rgb(255, 255, 255);
+        --inline-link-color: rgb(219, 129, 255);
+        --card-color: rgb(12, 4, 20);
+        --card-header-color: rgb(50, 0, 70);
+        --card-hover-color: rgb(21, 7, 34);
+        --card-hover-header-color: rgb(91, 0, 128);
+        --card-hover-shaddow-color: rgba(0, 0, 0, 0.432);
+        --card-abandoned-header-color: rgb(63, 38, 73);
+        --card-abandoned-hover-header-color: rgb(99, 67, 112);
+        --card-header-text-color: rgb(255, 255, 255);
+        --card-link-color: rgb(25, 21, 32);
+        --card-hover-link-color: rgb(67, 52, 97);
+        --card-text-color: rgb(255, 255, 255);
+
+        --teaser-filter: brightness(70%);
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.header p {
+    color: var(--text-color);
+    text-align: center;
+    max-width: 50rem;
+    margin: auto;
+    font-size: large;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+
+.header p a {
+    color: var(--inline-link-color);
+}
+
+.header p a:hover {
+    text-decoration: underline;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    row-gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-left: 0;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.entry {
+    display: inline-block;
+    width: 22rem;
+    background-color: var(--card-color);
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+    border-radius: 0.4rem;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    box-shadow: 0px 0px 5px transparent;
+}
+
+.entry.minor {
+    width: 18rem;
+}
+
+.entry:hover, .entry:focus-within {
+    background-color: var(--card-hover-color);
+    transform: scale(1.03) translate(3px,-3px);
+    box-shadow: -4px 4px 5px var(--card-hover-shaddow-color);
+}
+
+@media(prefers-reduced-motion){
+    .entry:hover, .entry:focus-within {
+        transform: unset;
+        box-shadow: 0px 0px 5px transparent;
+    }
+}
+
+
+
+.entry .title {
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--card-header-color);
+    color: var(--card-header-text-color);
+    border-radius: 0.4rem 0.4rem 0 0;
+    height: 2rem;
+    font-weight: 600;
+}
+
+.entry:hover .title, .entry:focus-within .title {
+    background-color: var(--card-hover-header-color);
+}
+
+.entry.abandoned .title {
+    background-color: var(--card-abandoned-header-color);
+}
+
+.entry.abandoned:hover .title {
+    background-color: var(--card-abandoned-hover-header-color);
+}
+
+
+.entry .title img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.entry .teaser {
+    width: 100%;
+    aspect-ratio: 2.5;
+    filter: var(--teaser-filter);
+    transition: 0.2s;
+}
+
+.entry:hover .teaser, .entry:focus-within .teaser {
+    filter: brightness(100%);
+}
+
+.entry .description {
+    padding: 1rem;
+    color: var(--card-text-color);
+    transition: 0.2s;
+    min-height: 6rem;
+    padding-bottom: 0.5rem;
+}
+
+.entry .link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 3rem;
+    background-color: var(--card-link-color);
+    color: var(--card-text-color);
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.2s;
+    font-weight: 600;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.entry .link:last-child {
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.entry .link:hover {
+    background-color: var(--card-hover-link-color);
+}

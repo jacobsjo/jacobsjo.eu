@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>jacobsjo's Tools and Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A my collection all the Minecraft tools I've worked on, as well as other and minor projects. Display and edit biome layouts, debug structure generation, and design terrain unsing density functions!" />
+    <meta name="author" content="jacobsjo" />
+
+    <meta name="og:title" content="jacobsjo's Tools and Projects" />
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="https://jacobsjo.eu" />
+    <meta name="og:image" content="https://jacobsjo.eu/og_image.png" />
+    <meta name="og:description" content="A my collection all the Minecraft tools I've worked on, as well as other and minor projects. Display and edit biome layouts, debug structure generation, and design terrain unsing density functions!" />
+</head>
+
+<body>
+    <div class="header">
+        <h1>jacobsjo's Tools and Projects</h1>
+        <p>Welcome to my collection all the Minecraft tools I've worked on, as well as other and minor projects. Display and edit biome layouts, debug structure generation, and design terrain unsing density functions!
+           Feel free to also check out the source code on GitHub.</p>
+        <p>If you find my tools usefull, I would apreciate if you consider to <a href="https://github.com/sponsors/jacobsjo/">Sponsor me on GitHub</a>. </p>
+        <p>Maybe you are looking for my <a href="https://jochenjacobs.eu">personal blog</a> instead?</p>
+    </div>
+    <div class="section">
+        <h2>Minecraft Tools</h2>
+        <div class="list">
+            <div class="entry">
+                <a href="https://map.jacobsjo.eu">
+                    <div class="title">
+                        <img class="icon" src="https://map.jacobsjo.eu/favicon.svg" alt="map logo" />
+                        Datapack map
+                    </div>
+                    <img class="teaser" src="teasers/map.webp" alt="A map showing biomes as different colors and markers for structures. Some shading is done to show terrain." />
+                    <div class="description">
+                        A map to display biome layout, terrain, and structure locations of minecraft worlds. Made
+                        deliberately to support custom worldgen datapacks, such as Terralith.
+                    </div>
+                </a>
+                <a class="link" href="https://github.com/jacobsjo/mc-datapack-map">
+                    View Source on GitHub
+                </a>
+            </div>
+            <div class="entry">
+                <a href="https://snowcapped.jacobsjo.eu">
+                    <div class="title">
+                        <img class="icon" src="https://snowcapped.jacobsjo.eu/icons/icon.svg" alt="snowcapped logo" />
+                        Snowcapped
+                    </div>
+                    <img class="teaser" src="teasers/snowcapped.webp" alt="A section of the snowcapped editor. Split into two parts. On the left a grid is seen where each cell contains another grid filled with colors. The right shows a map where the colors represent different biomes." />
+                    <div class="description">
+                        An editor for compley multi-noise biome configuations. Based on the vanilla overworld
+                        configuation setup, this editor allows the easy creation of 6 dimensional configuations.
+                    </div>
+                </a>
+                <a class="link" href="https://mc118.snowcapped.jacobsjo.eu">
+                    Legacy 1.18 version
+                </a>
+                <a class="link" href="https://github.com/jacobsjo/snowcapped/wiki">
+                    Documentation (Wiki)
+                </a>
+                <a class="link" href="https://github.com/jacobsjo/snowcapped">
+                    View Source on GitHub
+                </a>
+            </div>
+            <div class="entry">
+                <a href="https://jigsaw.jacobsjo.eu">
+                    <div class="title">
+                        <img class="icon" src="https://jigsaw.jacobsjo.eu/favicon.ico" alt="A jigsaw block as a logo." />
+                        Jigsaw previewer
+                    </div>
+                    <img class="teaser" src="teasers/jigsaw.webp" alt="Parts of a plains village during generation on hilly terrain. The jigsaw blocks are still visible. A street is marked with a green outline. Other houses connecting to the street are shown with red and blue outlines." />
+                    <div class="description">
+                        A previewer of structure generation from jigsaw configuations. Allows for debugging of
+                        generation issues, such as bounding box intersections.
+                    </div>
+                </a>
+                <a class="link" href="https://github.com/jacobsjo/minecraft-jigsaw-preview">
+                    View Source on GitHub
+                </a>
+            </div>
+            <div class="entry">
+                <a href="https://df-editor.jacobsjo.eu">
+                    <div class="title">
+                        Density function editor
+                    </div>
+                    <img class="teaser" src="teasers/df.webp" alt="Parts of a visual flow diagram. The test is unreadable, so that only the general structure is visible: Multiple nodes that are connected with edges. On one of the edges a tooltip is open showng an image that is mostly white and red but contains a few black spots, indicating caves." />
+                    <div class="description">
+                        A visual flow based editor for density functions. Density functions can be created by connecting
+                        individual nodes using edges. Includes 2d visualizations of the density functions.
+                    </div>
+                </a>
+                <a class="link" href="https://github.com/jacobsjo/density-function-editor">
+                    View Source on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Minor Minecraft Projects</h2>
+        <div class="list">
+            <div class="entry minor">
+                <a href="https://github.com/jacobsjo/mcicons/">
+                    <div class="title">
+                        MC-Icons
+                    </div>
+                    <div class="description">
+                        Repository containing images of all minecraft icons. Auto-created from vanilla resources.
+                    </div>
+                </a>
+            </div>
+            <div class="entry minor abandoned">
+                <a href="https://github.com/jacobsjo/df-command/releases">
+                    <div class="title">
+                        Density function command mod
+                    </div>
+                    <div class="description">
+                        A fabric mod adding a /density command to determine the value of any density function at any
+                        location.
+                    </div>
+                </a>
+            </div>
+            <div class="entry minor abandoned">
+                <a
+                    href="https://www.planetminecraft.com/data-pack/saddle-valley-rivers-canyons-and-underground-rivers-1-18-2-only/">
+                    <div class="title">
+                        Saddle Valley Rivers
+                    </div>
+                    <div class="description">
+                        A datapack that adds underground rivers and canyons to saddle valleys.
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>Other</h2>
+        <div class="list">
+            <div class="entry">
+                <a href="https://www.windy.com/plugins/windy-plugin-sun-position">
+                    <div class="title">
+                        Windy sun position plugin
+                    </div>
+                    <img class="teaser" src="teasers/windy-sun-position.webp" alt="This image consists of two parts. On the left there is a part of a timeline, going top to bottom showing times of the sunrise, blue and golden hour and nautical twilight. On the right there is a map showing the surrounding of Insbruck with a marker with multiple dashed lines going in different directions." />
+                    <div class="description">
+                        A plugin for windy.com that shows directions of the sun and moon. It also giv sunrise, sunset, golden-hour and other timings.
+                    </div>
+                </a>
+                <a class="link" href="https://community.windy.com/topic/9017/sun-position-plugin">
+                    Forum Post
+                </a>
+                <a class="link" href="https://github.com/jacobsjo/windy-plugin-sun-position">
+                    View Source on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
