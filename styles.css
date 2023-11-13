@@ -3,6 +3,7 @@ body {
     --text-color: rgb(12, 4, 20);
     --footer-text-color: rgb(109, 109, 109);
     --inline-link-color: rgb(161, 6, 223);
+    --header-highlight-border-color: rgb(194, 38, 255);
     --card-color: rgb(228, 228, 228);
     --card-header-color: rgb(161, 6, 223);
     --card-hover-color: rgb(236, 236, 236);
@@ -24,6 +25,7 @@ body {
         --text-color: rgb(255, 255, 255);
         --footer-text-color: rgb(153, 153, 153);
         --inline-link-color: rgb(219, 129, 255);
+        --header-highlight-border-color: rgb(204, 77, 255);
         --card-color: rgb(12, 4, 20);
         --card-header-color: rgb(50, 0, 70);
         --card-hover-color: rgb(21, 7, 34);
@@ -74,6 +76,12 @@ h1, h2 {
     margin-top: 1rem;
 }
 
+.header p.highlight {
+    border: 0.2rem solid var(--header-highlight-border-color);
+    background-color: var(--card-color);
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
 
 .header p a {
     color: var(--inline-link-color);
