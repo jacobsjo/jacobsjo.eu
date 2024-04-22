@@ -15,6 +15,10 @@ body {
     --card-link-color: rgb(187, 187, 187);
     --card-hover-link-color: rgb(188, 154, 247);
     --card-text-color: rgb(0, 0, 0);
+    --card-note-color: var(--text-color);
+    --card-note-background-color: rgb(255, 216, 143);
+    --card-hover-note-background-color: rgb(253, 197, 92);;
+    --card-note-border: 1px solid rgb(179, 116, 0);
 
     --teaser-filter: grayscale(20%);
 }
@@ -37,7 +41,11 @@ body {
         --card-link-color: rgb(25, 21, 32);
         --card-hover-link-color: rgb(67, 52, 97);
         --card-text-color: rgb(255, 255, 255);
-
+        --card-note-color: var(--text-color);
+        --card-note-background-color: rgb(58, 38, 0);
+        --card-hover-note-background-color: rgb(143, 93, 0);;
+        --card-note-border: 1px solid rgb(199, 129, 0);
+            
         --teaser-filter: brightness(70%);
     }
 }
@@ -109,8 +117,12 @@ h1, h2 {
     padding-left: 0;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 10rem;
-    padding-right: 10rem;
+}
+
+.list.narrowed {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .entry {
@@ -196,6 +208,22 @@ h1, h2 {
     transition: 0.2s;
     min-height: 6rem;
     padding-bottom: 0.5rem;
+}
+
+.entry .note {
+    background-color: var(--card-note-background-color);
+    color: var(--card-note-color);
+    transition: 0.2s;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    border: var(--card-note-border);
+    z-index: 10;
+    transform: translate(1rem, -1.1rem);
+    position: absolute;
+}
+
+.entry:hover .note {
+    background-color: var(--card-hover-note-background-color);
 }
 
 .entry .link {
