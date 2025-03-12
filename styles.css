@@ -2,18 +2,18 @@ body {
     --background-color: rgb(255, 255, 255);
     --text-color: rgb(12, 4, 20);
     --footer-text-color: rgb(109, 109, 109);
-    --inline-link-color: rgb(161, 6, 223);
-    --header-highlight-border-color: rgb(194, 38, 255);
-    --card-color: rgb(228, 228, 228);
-    --card-header-color: rgb(161, 6, 223);
+    --inline-link-color: rgb(6, 82, 223);
+    --header-highlight-border-color: rgb(255, 161, 38);
+    --card-color: rgb(228, 223, 216);
+    --card-header-color: rgb(170, 130, 71);
     --card-hover-color: rgb(236, 236, 236);
-    --card-hover-header-color: rgb(206, 86, 253);
-    --card-hover-shaddow-color: rgba(74, 21, 105, 0.432);
-    --card-abandoned-header-color: rgb(113, 94, 121);
-    --card-abandoned-hover-header-color: rgb(166, 156, 170);
+    --card-hover-header-color: rgb(202, 160, 70);
+    --card-hover-shaddow-color: rgba(170, 125, 29, 0.432);
+    --card-abandoned-header-color: rgb(121, 105, 94);
+    --card-abandoned-hover-header-color: rgb(197, 177, 150);
     --card-header-text-color: rgb(255, 255, 255);
     --card-link-color: rgb(187, 187, 187);
-    --card-hover-link-color: rgb(188, 154, 247);
+    --card-hover-link-color: rgb(247, 222, 154);
     --card-text-color: rgb(0, 0, 0);
     --card-note-color: var(--text-color);
     --card-note-background-color: rgb(255, 216, 143);
@@ -23,23 +23,27 @@ body {
     --teaser-filter: grayscale(20%);
 }
 
+.only-dark {
+    display: none;
+}
+
 @media(prefers-color-scheme: dark) {
     body {
         --background-color: rgb(35, 39, 38);
         --text-color: rgb(255, 255, 255);
         --footer-text-color: rgb(153, 153, 153);
-        --inline-link-color: rgb(219, 129, 255);
-        --header-highlight-border-color: rgb(204, 77, 255);
-        --card-color: rgb(12, 4, 20);
-        --card-header-color: rgb(50, 0, 70);
-        --card-hover-color: rgb(21, 7, 34);
-        --card-hover-header-color: rgb(91, 0, 128);
+        --inline-link-color: rgb(129, 219, 255);
+        --header-highlight-border-color: rgb(255, 178, 77);
+        --card-color: rgb(20, 13, 4);
+        --card-header-color: rgb(107, 69, 33);
+        --card-hover-color: rgb(34, 20, 7);
+        --card-hover-header-color: rgb(148, 82, 21);
         --card-hover-shaddow-color: rgba(0, 0, 0, 0.432);
-        --card-abandoned-header-color: rgb(63, 38, 73);
-        --card-abandoned-hover-header-color: rgb(99, 67, 112);
+        --card-abandoned-header-color: rgb(73, 58, 38);
+        --card-abandoned-hover-header-color: rgb(112, 85, 67);
         --card-header-text-color: rgb(255, 255, 255);
-        --card-link-color: rgb(25, 21, 32);
-        --card-hover-link-color: rgb(67, 52, 97);
+        --card-link-color: rgb(37, 29, 25);
+        --card-hover-link-color: rgb(97, 72, 52);
         --card-text-color: rgb(255, 255, 255);
         --card-note-color: var(--text-color);
         --card-note-background-color: rgb(58, 38, 0);
@@ -47,6 +51,14 @@ body {
         --card-note-border: 1px solid rgb(199, 129, 0);
             
         --teaser-filter: brightness(70%);
+    }
+
+    .only-light {
+        display: none;
+    }
+
+    .only-dark {
+        display: unset;
     }
 }
 
