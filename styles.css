@@ -5,13 +5,13 @@ body {
     --inline-link-color: rgb(6, 82, 223);
     --header-highlight-border-color: rgb(255, 161, 38);
     --card-color: rgb(228, 223, 216);
-    --card-header-color: rgb(170, 130, 71);
+    --card-header-color: rgb(214, 171, 105);
     --card-hover-color: rgb(236, 236, 236);
-    --card-hover-header-color: rgb(202, 160, 70);
+    --card-hover-header-color: rgb(240, 184, 63);
     --card-hover-shaddow-color: rgba(170, 125, 29, 0.432);
     --card-abandoned-header-color: rgb(121, 105, 94);
     --card-abandoned-hover-header-color: rgb(197, 177, 150);
-    --card-header-text-color: rgb(255, 255, 255);
+    --card-header-text-color: rgb(0, 0, 0);
     --card-link-color: rgb(187, 187, 187);
     --card-hover-link-color: rgb(247, 222, 154);
     --card-text-color: rgb(0, 0, 0);
@@ -20,7 +20,7 @@ body {
     --card-hover-note-background-color: rgb(253, 197, 92);;
     --card-note-border: 1px solid rgb(179, 116, 0);
 
-    --teaser-filter: grayscale(20%);
+    --teaser-filter: grayscale(10%);
 }
 
 .only-dark {
@@ -50,7 +50,7 @@ body {
         --card-hover-note-background-color: rgb(143, 93, 0);;
         --card-note-border: 1px solid rgb(199, 129, 0);
             
-        --teaser-filter: brightness(70%);
+        --teaser-filter: brightness(90%);
     }
 
     .only-light {
@@ -111,13 +111,8 @@ h1, h2 {
     text-decoration: underline;
 }
 
-.disclaimer {
-    color: var(--footer-text-color);
-    text-align: center;
-    max-width: 70rem;
-    margin: auto;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
+.section {
+    margin-top: 2rem;
 }
 
 .list {
@@ -129,6 +124,7 @@ h1, h2 {
     padding-left: 0;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: 1.5rem;
 }
 
 .list.narrowed {
@@ -267,7 +263,7 @@ h1, h2 {
     max-width: 50rem;
     margin: auto;
     font-size: medium;
-    margin-top: 5rem;
+    margin-top: 1.5rem;
 }
 
 .footer a{
